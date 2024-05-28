@@ -20,7 +20,7 @@ namespace CRUD_application_2.Controllers
                 users = users.Where(s => s.Name.Contains(searchString));
             }
 
-            return View(users.ToList());
+            return View("Index", users.ToList());
         }
 
         // GET: User/Details/5
@@ -31,7 +31,7 @@ namespace CRUD_application_2.Controllers
             {
                 return HttpNotFound();
             }
-            return View(user);
+            return View("Details", user);
         }
  
       // GET: User/Create
